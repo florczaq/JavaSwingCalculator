@@ -9,7 +9,6 @@ public class Screen extends MyPanel{
     Screen(int width, int height){
         super(new BorderLayout(), new Dimension(width, height));
         display = new MyLabel(result, new Font("Arial", 0, 40), JLabel.RIGHT);
-        
         super.add(display, BorderLayout.CENTER);
         super.setBackground(new Color(0xf1f1f1f1));
         super.setBorder(BorderFactory.createLineBorder(Color.BLACK, 2, false));

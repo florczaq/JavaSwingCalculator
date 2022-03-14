@@ -12,9 +12,7 @@ public class App {
                     new ProcessBuilder("clear").inheritIO().start();
                 } catch (IOException e) {
                 }
-
                 new MyFrame((int) size.getWidth(), (int) size.getHeight(), "Calculator",
-
                         (int) (dSize.getWidth() / 2 - size.getWidth() / 2),
                         (int) (dSize.getHeight() / 2 - size.getHeight() / 2));
 

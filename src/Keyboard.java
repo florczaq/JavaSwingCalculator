@@ -12,7 +12,6 @@ public class Keyboard extends MyPanel {
                 "1", "2", "3", "-",
                 "C", "0", "/", "="
         };
-
         for (String s : keys) {
             buttons.add(new MyButton(s, new Font("Arial", 0, 20), new Color(0xF0F0F0F0)));
             super.add(buttons.get(buttons.size() - 1));
@@ -29,7 +28,7 @@ public class Keyboard extends MyPanel {
         try {
             return buttons.get(index);
         } catch(Exception e){
-            System.out.println("Wrong index!! [Keyboard.java]");
+            System.out.println("Wrong index!!");
             return buttons.get(0);
         }
     }
@@ -46,5 +45,4 @@ public class Keyboard extends MyPanel {
     public final int getButtonsListSize(){
         return buttons.size();
     }
-
 }
