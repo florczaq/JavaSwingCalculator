@@ -37,14 +37,30 @@ public class MyFrame extends JFrame implements ActionListener {
     public void actionPerformed(ActionEvent event) {
         for (int i = 0; i < keyboard.getButtonsListSize(); i++) {
             if (event.getSource() == keyboard.getButton(i)) {
-                if (keyboard.getButtonText(i) == "C")
-                    result = " ";
-                else if (keyboard.getButtonText(i) == "=") {
-                    try {
-                        result = calc.calculate(result);
-                    } catch (ScriptException e) {}
-                } else
-                    result += keyboard.getButtonText(i);
+                switch (keyboard.getButtonText(i)) {
+                    case "C":
+                        result = " ";
+                        break;
+
+                    case "=":
+                        try {
+                            if ((int) result.charAt(result.length() - 1) >= 48)
+                                result = calc.calculate(result);
+                        } catch (ScriptException e) {
+                            System.out.println(e);
+                        }
+                        break;
+
+                    case ".":
+                        if ((int) result.charAt(result.length() - 1) >= 48)
+                            result += keyboard.getButtonText(i);
+                        break;
+
+                    default:
+                        if (keyboard.getButtonText(i) != " ")
+                            result += keyboard.getButtonText(i);
+                        break;
+                }
                 screen.setText(result);
             }
         }

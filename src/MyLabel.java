@@ -7,8 +7,21 @@ public class MyLabel extends JLabel {
         setFont(font);
     }
 
-    MyLabel(String text, Font font, int aligment){
+    MyLabel(String text, Font font, int aligment) {
         this(text, font);
         setHorizontalAlignment(aligment);
     }
+
+    public void setCharSize(int size) {
+        setFont(new Font(getFont().getFamily(), 0, size));
+    }
+
+    public final int getFontCharSize() {
+        return super.getFont().getSize();
+    }
+
+    public final int getLabelWidth() {
+        return super.getSize().width;
+    }
+
 }
