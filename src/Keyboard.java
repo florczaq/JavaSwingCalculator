@@ -14,13 +14,14 @@ public class Keyboard extends MyPanel {
         };
 
         for (String s : keys) {
-            buttons.add(new MyButton(s, new Font("Arial", 0, 20), new Color(0xF0F0F0F0)));
+            buttons.add(new MyButton(s, new Font("Arial", 0, 20), new Color(0x0F0F0F0F), new Color(0x686868)));
             super.add(buttons.get(buttons.size() - 1));
         }
     }
 
     Keyboard(int width, int height) {
         super(new GridLayout(4, 4), new Dimension(width, height));
+        super.setBackground(new Color (0x0000));
         initButtons();
     }
 

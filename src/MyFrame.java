@@ -17,6 +17,7 @@ public class MyFrame extends JFrame implements ActionListener {
         keyboard = new Keyboard(0, 400);
         for (int i = 0; i < keyboard.getButtonsListSize(); i++)
             keyboard.getButton(i).addActionListener(this);
+        
         panel.setLayout(new BorderLayout());
         panel.add(screen, BorderLayout.NORTH);
         panel.add(keyboard, BorderLayout.CENTER);
@@ -26,6 +27,7 @@ public class MyFrame extends JFrame implements ActionListener {
     MyFrame(int width, int height, String title, int x, int y) {
         super(title);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        getContentPane().setBackground(new Color(0x000));
         setBounds(x, y, width, height);
         setLayout(new BorderLayout());
         add(mainPanel(), BorderLayout.CENTER);

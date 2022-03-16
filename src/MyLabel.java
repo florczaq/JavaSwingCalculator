@@ -12,6 +12,10 @@ public class MyLabel extends JLabel {
         setHorizontalAlignment(aligment);
     }
 
+    public void setTextColor(Color color){
+        setForeground(color);
+    }
+
     public void setCharSize(int size) {
         setFont(new Font(getFont().getFamily(), 0, size));
     }
