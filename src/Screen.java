@@ -18,5 +18,11 @@ public class Screen extends MyPanel {
 
     public void setText(String text) {
         display.setText(text);
+        if (display.getTextWidth() > super.getSize().width)
+            display.setCharSize((int)(display.getFontCharSize()*0.9));
+    }
+
+    public void setDefaultTextSize(){
+        display.setCharSize(60);
     }
 }

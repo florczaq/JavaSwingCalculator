@@ -28,4 +28,9 @@ public class MyLabel extends JLabel {
         return super.getSize().width;
     }
 
+    public final int getTextWidth(){
+        return super.getFontMetrics(super.getFont()).stringWidth(super.getText());
+    }
+
+
 }

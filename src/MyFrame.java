@@ -42,6 +42,7 @@ public class MyFrame extends JFrame implements ActionListener {
                 switch (keyboard.getButtonText(i)) {
                     case "C":
                         result = " ";
+                        screen.setDefaultTextSize();
                         break;
 
                     case "=":
